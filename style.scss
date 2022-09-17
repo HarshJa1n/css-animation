@@ -1,5 +1,10 @@
 @import './styles/base.scss';
 
+:root {
+  --duration: 2s;
+  --easing: cubic-bezier(0.5, 0, 0.5, 0);
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   padding: 5vmin;
@@ -28,7 +33,7 @@ ul {
   width: 5vmin;
   border-radius: 50%;
   background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
-  animation: slide-right 1s linear infinite;
+  animation: slide-right var(--duration) var(--easing) infinite;
 }
 
 @keyframes slide-right {
